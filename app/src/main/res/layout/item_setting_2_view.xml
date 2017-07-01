@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="自动更新"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_toggle"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/off"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+</RelativeLayout>

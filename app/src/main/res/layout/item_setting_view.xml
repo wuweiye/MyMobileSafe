@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/first_selector"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="8dp">
+    <TextView
+        android:id="@+id/tv_setting_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自动更新"/>
+    <TextView
+        android:id="@+id/tv_setting_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_setting_item"
+        android:text="test"
+        />
+    <CheckBox
+        android:id="@+id/cb_setting"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/cb_setting"/>
+
+</RelativeLayout>

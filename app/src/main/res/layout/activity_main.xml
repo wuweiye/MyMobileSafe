@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wuwei.mymobliesafe.act.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/ic_launcher"/>
+        <com.wuwei.mymobliesafe.view.shimmer.ShimmerTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="The Rebels Against The God"
+            android:layout_marginTop="40dp"
+            android:layout_centerInParent="true"
+            android:textColor="#000"
+            android:textSize="28sp"
+            />
+
+        <com.wuwei.mymobliesafe.view.FocusableTextView
+            android:id="@+id/tv_des"
+            android:layout_below="@id/iv_icon"
+            android:text="滚动条"
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/setting_selector"
+            />
+    </RelativeLayout>
+    <org.askerov.dynamicgrid.DynamicGridView
+        android:id="@+id/gv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="5dp">
+    </org.askerov.dynamicgrid.DynamicGridView>
+
+</LinearLayout>

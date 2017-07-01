@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wuwei.mymobliesafe.act.SetupOverActivity">
+
+    <TextView
+        style="@style/TitleBarTextView"
+        android:text="手机安全管理"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全号码"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="0000"
+            android:layout_alignParentRight="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="2dp"
+            android:layout_alignBottom="@id/tv_phone"
+            android:background="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="防盗是否开启"
+            android:textSize="18sp"/>
+        <ImageView
+            android:id="@+id/tv_lock"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="#000"
+            android:layout_alignParentRight="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="2dp"
+            android:layout_alignBottom="@id/tv_safe"
+            android:background="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_reset_setup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="重新进入设置向导"/>
+
+    <TextView
+        android:background="@drawable/gradient_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="功能简介"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:layout_margin="5dp"
+        android:text="GPS追踪"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:layout_margin="5dp"
+        android:text="播放报警音乐"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:layout_margin="5dp"
+        android:text="远程数据销毁"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:layout_margin="5dp"
+        android:text="远程锁屏"/>
+
+</LinearLayout>

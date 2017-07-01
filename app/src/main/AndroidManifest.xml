@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wuwei.mymobliesafe"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_RESPOND_VIA_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES" />
+<uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <!-- 网络定位 -->
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:persistent="true"
+        android:theme="@style/MyTheme">
+        <receiver android:name=".receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.DeviceAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.AddressService" />
+        <service android:name=".service.BlackNumberService" />
+        <service
+            android:name=".service.LockService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".act.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".act.MainActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".act.SettingActivity" />
+        <activity android:name=".act.TitleActivity" />
+        <activity android:name=".act.TestActivity" />
+        <activity android:name=".act.SetupOverActivity" />
+        <activity android:name=".act.Setup1Activity" />
+        <activity android:name=".act.Setup2Activity" />
+        <activity android:name=".act.Setup3Activity" />
+        <activity android:name=".act.Setup5Activity" />
+        <activity android:name=".act.ContactListActivity" />
+        <activity android:name=".act.PositionAction" />
+        <activity android:name=".act.DeviceAction" />
+        <activity android:name=".act.AToolAction" />
+        <activity android:name=".act.QueryAddressAction" />
+        <activity android:name=".act.BlackNumberActivity" />
+        <activity android:name=".act.AppManagerAction" />
+        <activity android:name=".act.ProcessActivity" />
+        <activity android:name=".act.ProcessSettingActivity" />
+        <activity android:name=".act.AppLockAction" />
+
+        <service
+            android:name=".service.WatchDogService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".act.EnterPsdActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance" />
+        <activity android:name=".act.AnitVirusActivity" />
+        <activity android:name=".act.CacheClearAction" />
+        <activity android:name=".act.base.BaseClearCacheActivity" />
+        <activity android:name=".act.ServiceClearAction" />
+        <activity android:name=".act.TrafficActivity" />
+        <activity android:name=".act.Setting2Activity" />
+        <activity android:name=".act.Setup4Activity" />
+        <activity android:name=".act.test.TestActivity"></activity>
+    </application>
+
+</manifest>

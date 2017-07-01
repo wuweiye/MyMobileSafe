@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cache_clear_action"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wuwei.mymobliesafe.act.CacheClearAction">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/TitleBarTextView"
+            android:text="缓存清理"
+            android:gravity="left"/>
+        <Button
+            android:id="@+id/bt_clear"
+            android:text="立刻清理"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#429ed6">
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <RelativeLayout
+                android:id="@+id/rl_scan_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/ic_launcher"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/rl_scan_bg"
+                android:text="123567"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/tv_cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/rl_scan_bg"
+                android:layout_below="@id/tv_app_name"
+                android:singleLine="true"
+                android:text="123567"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <ProgressBar
+                android:id="@+id/pb_bar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_alignLeft="@+id/tv_app_name"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/rl_scan_bg"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:text="缓存清理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

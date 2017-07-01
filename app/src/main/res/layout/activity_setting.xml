@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wuwei="http://schemas.android.com/apk/res/com.wuwei.mymobliesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wuwei.mymobliesafe.act.SettingActivity"
+    tools:ignore="ResAuto">
+
+    <include layout="@layout/activity_title"/>
+
+    <com.wuwei.mymobliesafe.view.SettingItemView
+        android:id="@+id/sit_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wuwei:destitle="自动更新"
+        wuwei:desoff="自动更新已关闭"
+        wuwei:deson="自动更新已开启"
+        >
+    </com.wuwei.mymobliesafe.view.SettingItemView>
+
+    <com.wuwei.mymobliesafe.view.SettingItemView
+        android:id="@+id/siv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wuwei:destitle="电话归属地显示设置"
+        wuwei:desoff="电话归属地已关闭"
+        wuwei:deson="电话归属地已开启"
+        >
+
+    </com.wuwei.mymobliesafe.view.SettingItemView>
+    <com.wuwei.mymobliesafe.view.SettingItemView
+        android:id="@+id/siv_blacknumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wuwei:destitle="黑名单拦截设置"
+        wuwei:desoff="黑名单拦截已关闭"
+        wuwei:deson="黑名单拦截已开启"
+        >
+
+    </com.wuwei.mymobliesafe.view.SettingItemView>
+    <com.wuwei.mymobliesafe.view.SettingItemView
+        android:id="@+id/siv_app_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wuwei:destitle="程序锁设置"
+        wuwei:desoff="程序锁已关闭"
+        wuwei:deson="程序锁已开启"
+        >
+
+    </com.wuwei.mymobliesafe.view.SettingItemView>
+
+</LinearLayout>

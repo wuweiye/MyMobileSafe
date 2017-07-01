@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.wuwei.mymobliesafe.act.AnitVirusActivity">
+
+    <TextView
+        android:text="手机杀毒"
+        style="@style/TitleBarTextView"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#4a86ce">
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <!--<TextView
+                android:id="@+id/tv_progress"
+                android:layout_centerInParent="true"
+                android:textSize="50sp"
+                android:textColor="#fff"
+                android:text="18%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />-->
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/tv_progress"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="50dp"
+                android:background="#4A86CE"
+                app:arc_bottom_text="扫描中"
+                app:arc_stroke_width="10dp"
+                app:arc_text_color="#fff"
+                app:arc_progress="55"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+            <TextView
+                android:id="@+id/tv_app_package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_progress"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:text="包名"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!--android:progressDrawable="@drawable/progress_bg"-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_add_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
